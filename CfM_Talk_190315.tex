@@ -196,7 +196,16 @@ keywordstyle=\color{blue}\bfseries}
 	     \includegraphics[width=8.5cm]{Images/boardrory}
     \column{0.3\textwidth}
 	     \begin{center}
-		   \includegraphics[width=2cm]{Images/compass} \newline \newline \newline
+         \begin{tikzpicture}
+           \node (north) [words, xshift=1cm, yshift=0cm] {N};
+           \node (west) [words, xshift=0cm, yshift=-1cm] {W};
+           \node (east) [words, xshift=2cm, yshift=-1cm] {E};
+           \node (south) [words, xshift=1cm, yshift=-2cm] {S};
+           \draw [arrow] (0.4,-0.25) -- (0.4,-1.75);
+           \draw [arrow] (0.4,-1.75) -- (0.4,-0.25);
+           \draw [arrow] (-0.35,-1) -- (1.15,-1);
+           \draw [arrow] (1.15,-1) -- (-0.35,-1);
+         \end{tikzpicture} \newline \newline
 		   \pause
 		   \huge{\textbf{\textcolor{red}{only 85\% successful}}}
 	     \end{center}
